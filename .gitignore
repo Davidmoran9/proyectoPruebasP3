@@ -43,4 +43,5 @@ Thumbs.db
 
 # K6 results
 *.json
+!package-lock.json
 results/
