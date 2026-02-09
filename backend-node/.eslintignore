@@ -1,0 +1,6 @@
+# Ignorar archivos de K6 (usan ES6 modules)  
+src/middlewares/prueba-*.js
+
+# Ignorar archivos de configuración
+node_modules/
+coverage/
