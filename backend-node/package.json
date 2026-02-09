@@ -1,0 +1,33 @@
+{
+  "name": "backend-node",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "start": "node src/app.js",
+    "test": "jest",
+    "test:watch": "jest --watch",
+    "test:coverage": "jest --coverage",
+    "lint": "eslint src/routes/*.js src/models/*.js src/*.js",
+    "lint:fix": "eslint src/routes/*.js src/models/*.js src/*.js --fix",
+    "performance": "k6 run prueba-carga-rendimiento.js",
+    "performance:soak": "k6 run src/middlewares/prueba-soak.js",
+    "performance:spike": "k6 run src/middlewares/prueba-spike.js",
+    "performance:all": "npm run performance && npm run performance:soak && npm run performance:spike",
+    "ci": "npm run lint && npm run test && npm start & sleep 3 && npm run performance && pkill node"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "bcryptjs": "^3.0.3",
+    "cors": "^2.8.5",
+    "express": "^5.2.1",
+    "jsonwebtoken": "^9.0.3",
+    "mongoose": "^9.0.2"
+  },
+  "devDependencies": {
+    "eslint": "^10.0.0",
+    "jest": "^30.2.0"
+  }
+}
