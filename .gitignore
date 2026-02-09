@@ -41,7 +41,8 @@ Thumbs.db
 *.swp
 *.swo
 
-# K6 results
-*.json
-!package-lock.json
+# K6 results - archivos específicos de resultados de testing
 results/
+*-results.json
+*-report.json
+k6-*.json
