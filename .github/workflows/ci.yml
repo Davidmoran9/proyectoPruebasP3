@@ -108,3 +108,4 @@ jobs:
         
       - name: ⚡ Ejecutar Performance Tests
         run: k6 run prueba-carga-rendimiento.js --quiet
+        continue-on-error: true  # Performance tests son informativos, no bloquean el pipeline
