@@ -8,7 +8,7 @@ module.exports = (req, res, next) => {
     return res.status(401).json({ msg: 'Acceso denegado' });
   }
 
-  const token = authHeader.split(' ')[1]; // 🔥 Bearer TOKEN
+  const token = authHeader.split(' ')[1]; // Bearer TOKEN
 
   if (!token) {
     return res.status(401).json({ msg: 'Token inválido' });

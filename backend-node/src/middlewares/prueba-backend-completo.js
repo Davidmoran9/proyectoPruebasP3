@@ -11,7 +11,7 @@ export let options = {
 
 export default function () {
 
-  // ---------- 1️LOGIN ----------
+  // ---------- LOGIN ----------
   const loginUrl = 'http://localhost:3000/api/auth/login';
 
   const loginPayload = JSON.stringify({
@@ -39,7 +39,7 @@ export default function () {
     return;
   }
 
-  // ---------- 2️CREAR LIBRO ----------
+  // ---------- CREAR LIBRO ----------
   const libroUrl = 'http://localhost:3000/api/libros';
 
   const libroPayload = JSON.stringify({
@@ -61,7 +61,7 @@ export default function () {
     'libro creado': (r) => r.status === 201 || r.status === 200,
   });
 
-  // ---------- 3️LISTAR LIBROS ----------
+  // ---------- LISTAR LIBROS ----------
   const getLibros = http.get(
     'http://localhost:3000/api/libros',
     {

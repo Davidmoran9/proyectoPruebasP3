@@ -8,7 +8,7 @@ app.use(express.json());
 // Importamos las rutas - RUTA CORREGIDA
 app.use('/api/auth', require('./src/routes/auth.routes'));
 
-describe('🔐 API Auth Routes', () => {
+describe('API Auth Routes', () => {
   describe('POST /api/auth/login', () => {
     test('debería hacer login exitoso con credenciales válidas', async () => {
       const res = await request(app)

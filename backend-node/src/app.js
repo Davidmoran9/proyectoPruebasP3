@@ -2,7 +2,7 @@ const express = require('express');
 const cors = require('cors');
 console.log('APP INICIADA');
 
-// 🔥 IMPORTAR LA CONEXIÓN A MONGO (COMENTADO TEMPORALMENTE)
+// IMPORTAR LA CONEXIÓN A MONGO (COMENTADO TEMPORALMENTE)
 // require('./database');
 
 const app = express();
@@ -11,9 +11,9 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
-// 📊 Middleware para ver las peticiones
+// Middleware para ver las peticiones
 app.use((req, res, next) => {
-  console.log(`📨 ${req.method} ${req.url} - ${new Date().toLocaleTimeString()}`);
+  console.log(` ${req.method} ${req.url} - ${new Date().toLocaleTimeString()}`);
   next();
 });
 

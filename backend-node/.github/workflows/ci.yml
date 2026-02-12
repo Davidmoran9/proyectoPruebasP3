@@ -41,6 +41,17 @@ jobs:
           cd backend-node
           npm run test:coverage
 
+      - name: 🧪 Tests con Cobertura
+        run: npm run test:coverage
+
+      - name: Verificar Cobertura >=95%
+        run: |
+          COVERAGE=$(cat coverage/coverage-summary.json | jq '.total.lines.pct')
+          if (( $(echo "$COVERAGE < 95" | bc -l) )); then
+            echo "Cobertura insuficiente: $COVERAGE%"
+            exit 1
+          fi
+
   frontend_tests:
     name: 🎨 Frontend Build & Tests  
     runs-on: ubuntu-latest
