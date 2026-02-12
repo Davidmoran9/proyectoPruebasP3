@@ -6,7 +6,7 @@ import { Injectable } from '@angular/core';
 })
 export class LibroService {
 
-  private API = 'http://localhost:3000/api/libros';
+  private API = 'https://proyectopruebasp3.onrender.com/api/libros';
 
   constructor(private http: HttpClient) {}
 

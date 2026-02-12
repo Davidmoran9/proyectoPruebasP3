@@ -12,7 +12,7 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - name: 📦 Instalar dependencias
-        run: npm ci
+        run: npm ci && npm run build
         working-directory: frontend-angular/frontend-angular
       - name: 🏗️ Build
         run: npm run build
