@@ -9,10 +9,10 @@ const auth = require('../middlewares/auth.middleware');
 
 router.post('/', auth, async (req, res) => {
   try {
-    const { titulo, autor, cantidad } = req.body;
+    const { titulo, autor, cantidad = 1 } = req.body;
 
-    if (!titulo || !autor || cantidad == null) {
-      return res.status(400).json({ msg: 'Todos los campos son obligatorios' });
+    if (!titulo || !autor) {
+      return res.status(400).json({ msg: 'Título y autor son obligatorios' });
     }
 
     if (cantidad < 0) {

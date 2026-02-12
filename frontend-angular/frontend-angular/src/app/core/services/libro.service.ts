@@ -14,7 +14,7 @@ export class LibroService {
     return this.http.get<any[]>(this.API);
   }
 
-  crearLibro(libro: { titulo: string; autor: string }) {
+  crearLibro(libro: { titulo: string; autor: string; cantidad?: number }) {
     return this.http.post(this.API, libro);
   }
   eliminarLibro(id: string) {
