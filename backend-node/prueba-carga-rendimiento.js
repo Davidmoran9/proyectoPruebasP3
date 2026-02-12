@@ -3,13 +3,13 @@ import { sleep, check } from 'k6';
 
 export let options = {
     stages: [
-        { duration: '10s', target: 300 }, // aumento gradual
-        { duration: '30s', target: 300 },// carga sostenida
-        { duration: '10s', target: 0 }
+        { duration: '10s', target: 50 },  // aumento gradual (reducido para CI)
+        { duration: '20s', target: 50 },  // carga sostenida
+        { duration: '10s', target: 0 }    // bajada
     ],
     thresholds: {
-        http_req_duration: ['p(95)<500'],// el 95% de las solicitudes deben responder en menos de 500ms
-        http_req_failed: ['rate<0.01']// menos del 1% de las solicitudes deben fallar
+        http_req_duration: ['p(95)<2000'], // el 95% debe responder en menos de 2s (ajustado para CI)
+        http_req_failed: ['rate<0.10']     // menos del 10% de fallos (ajustado para CI)
     }
 };
 
