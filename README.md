@@ -1,10 +1,10 @@
-# 📚 Sistema de Biblioteca - Angular + Node.js
+#  Sistema de Biblioteca - Angular + Node.js
 
-## 🚀 CI/CD Pipeline Completo
+##  CI/CD Pipeline Completo
 
 [![CI/CD Pipeline](https://github.com/tu-usuario/biblioteca-proyecto/actions/workflows/ci.yml/badge.svg)](https://github.com/tu-usuario/biblioteca-proyecto/actions)
 
-### 🏗️ Arquitectura del Proyecto
+###  Arquitectura del Proyecto
 
 ```
 BIBLIOTECA ANGULAR/
@@ -15,7 +15,7 @@ BIBLIOTECA ANGULAR/
 │   │   └── middlewares/      # Tests de performance K6
 │   ├── *.test.js            # Tests unitarios con Jest
 │   └── package.json         # Scripts y dependencias
-├── 🎨 frontend-angular/       # Aplicación Angular
+├──  frontend-angular/       # Aplicación Angular
 │   └── frontend-angular/
 │       ├── src/app/         # Componentes Angular
 │       └── package.json     # Scripts Angular
@@ -23,9 +23,9 @@ BIBLIOTECA ANGULAR/
 └── package.json             # Scripts del workspace
 ```
 
-## ⚡ Quick Start
+##  Quick Start
 
-### 📦 Instalación Completa
+###  Instalación Completa
 ```bash
 # Instalar todas las dependencias
 npm run install:all
@@ -35,7 +35,7 @@ npm run install:backend
 npm run install:frontend
 ```
 
-### 🚀 Desarrollo Local
+###  Desarrollo Local
 ```bash
 # Backend (Puerto 3000)
 npm run start:backend
@@ -44,9 +44,9 @@ npm run start:backend
 npm run start:frontend
 ```
 
-## 🧪 Testing & Quality Assurance
+##  Testing & Quality Assurance
 
-### 🔍 Tests Unitarios
+###  Tests Unitarios
 ```bash
 # Backend tests con Jest
 cd backend-node
@@ -55,7 +55,7 @@ npm run test:coverage    # Con reporte de cobertura
 npm run test:watch       # Modo watch
 ```
 
-### 🧹 Code Quality
+###  Code Quality
 ```bash
 # Linting del código
 cd backend-node  
@@ -63,7 +63,7 @@ npm run lint
 npm run lint:fix         # Auto-fix problemas
 ```
 
-### ⚡ Performance Testing
+###  Performance Testing
 ```bash
 # Asegurate de que el backend esté corriendo
 npm run start:backend
@@ -76,37 +76,37 @@ npm run performance:spike # Test de picos
 npm run performance:all  # Todos los tests
 ```
 
-## 🤖 CI/CD Pipeline
+##  CI/CD Pipeline
 
-### 📋 Workflows Automáticos
+###  Workflows Automáticos
 
-**🔧 Backend Tests & Lint**
-- ✅ ESLint code quality
-- ✅ Jest unit tests  
-- ✅ Coverage reports
+** Backend Tests & Lint**
+-  ESLint code quality
+-  Jest unit tests  
+-  Coverage reports
 
-**🎨 Frontend Build & Tests**
-- ✅ Angular build
-- ✅ Unit tests (Jasmine/Karma)
+** Frontend Build & Tests**
+-  Angular build
+-  Unit tests (Jasmine/Karma)
 
-**⚡ Performance Tests** *(solo en push a main)*
-- ✅ K6 load testing
-- ✅ API response validation
+** Performance Tests** *(solo en push a main)*
+-  K6 load testing
+-  API response validation
 
-### 🔄 Triggers
+###  Triggers
 - **Push** a `main` o `develop` → Pipeline completo
 - **Pull Request** a `main` → Tests y build
 
-## 📊 Scripts Disponibles
+##  Scripts Disponibles
 
-### 🌍 Workspace (desde raíz)
+###  Workspace (desde raíz)
 ```bash
 npm run install:all      # Instalar todo
 npm run test:all         # Tests completos
 npm run ci               # Pipeline completo local
 ```
 
-### 🔧 Backend (desde backend-node/)
+###  Backend (desde backend-node/)
 ```bash
 npm start                # Iniciar servidor
 npm test                 # Tests unitarios
@@ -114,14 +114,14 @@ npm run lint             # Code linting
 npm run performance:all  # Performance tests
 ```
 
-### 🎨 Frontend (desde frontend-angular/frontend-angular/)
+###  Frontend (desde frontend-angular/frontend-angular/)
 ```bash
 npm start                # Dev server
 npm run build            # Build producción
 npm test                 # Angular tests
 ```
 
-## 🛠️ Tecnologías
+##  Tecnologías
 
 **Backend:**
 - Node.js + Express
@@ -140,11 +140,11 @@ npm test                 # Angular tests
 - Automated Testing
 - Code Quality Checks
 
-## 📈 Métricas de Performance
+##  Métricas de Performance
 
 Los tests de K6 validan:
-- ⚡ **Response Time**: < 500ms
-- 📊 **Success Rate**: > 99%
+-  **Response Time**: < 500ms
+-  **Success Rate**: > 99%
 - 👥 **Concurrent Users**: Hasta 300
 - 🔄 **Soak Testing**: 5 minutos de carga sostenida
 
