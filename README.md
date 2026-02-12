@@ -8,7 +8,7 @@
 
 ```
 BIBLIOTECA ANGULAR/
-├── 🔧 backend-node/           # API REST con Node.js & Express
+├──  backend-node/           # API REST con Node.js & Express
 │   ├── src/
 │   │   ├── routes/           # Rutas de libros y autenticación  
 │   │   ├── models/           # Modelos de datos
@@ -145,9 +145,8 @@ npm test                 # Angular tests
 Los tests de K6 validan:
 -  **Response Time**: < 500ms
 -  **Success Rate**: > 99%
-- 👥 **Concurrent Users**: Hasta 300
-- 🔄 **Soak Testing**: 5 minutos de carga sostenida
+- **Concurrent Users**: Hasta 300
+-  **Soak Testing**: 5 minutos de carga sostenida
 
 ---
 
-**🎯 ¿Listo para GitHub?** Solo sube el código y el CI/CD funcionará automáticamente! 🚀
