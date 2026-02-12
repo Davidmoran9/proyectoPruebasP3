@@ -19,13 +19,9 @@ router.post('/', auth, async (req, res) => {
       return res.status(400).json({ msg: 'La cantidad no puede ser negativa' });
     }
 
-    // SIMULACIÓN sin MongoDB
-    const libroCreado = { 
-      _id: Date.now().toString(), 
-      titulo, 
-      autor, 
-      cantidad: Number(cantidad) 
-    };
+    // Crear libro en MongoDB
+    const nuevoLibro = new Libro({ titulo, autor, cantidad: Number(cantidad) });
+    const libroCreado = await nuevoLibro.save();
 
     res.status(201).json(libroCreado);
   } catch (error) {
@@ -39,12 +35,7 @@ router.post('/', auth, async (req, res) => {
 // ============================
 router.get('/', auth, async (req, res) => {
   try {
-    // DATOS SIMULADOS (sin MongoDB)
-    const libros = [
-      { _id: '1', titulo: 'El Quijote de la Mancha', autor: 'Miguel de Cervantes', cantidad: 5 },
-      { _id: '2', titulo: '1984', autor: 'George Orwell', cantidad: 3 },
-      { _id: '3', titulo: 'Cien años de soledad', autor: 'Gabriel García Márquez', cantidad: 8 }
-    ];
+    const libros = await Libro.find();
     res.json(libros);
   } catch (error) {
     res.status(500).json({ msg: 'Error al obtener libros' });

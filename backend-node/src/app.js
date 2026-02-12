@@ -2,8 +2,8 @@ const express = require('express');
 const cors = require('cors');
 console.log('APP INICIADA');
 
-// IMPORTAR LA CONEXIÓN A MONGO (COMENTADO TEMPORALMENTE)
-// require('./database');
+// IMPORTAR LA CONEXIÓN A MONGO
+require('./database');
 
 const app = express();
 
@@ -21,7 +21,7 @@ app.use((req, res, next) => {
 app.use('/api/libros', require('./routes/libros.routes'));
 app.use('/api/auth', require('./routes/auth.routes'));
 
-const PORT = 3000;
+const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {
   console.log('Servidor backend corriendo en puerto', PORT);
 });
